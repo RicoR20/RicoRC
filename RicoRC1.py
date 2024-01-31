@@ -17,6 +17,6 @@ ax.set_ylabel("")
 ax.set_xlabel("x")
 ax.tick_params(axis='y', labelsize=20)
 ax.set_xticklabels(ax.get(xticklabels(), rotation=30, ha='right')
-ax.tick(params(axis='x', labelsize=15)
+ax.tick_params(axis='x', labelsize=15)
 
 st.pyplot(fig)

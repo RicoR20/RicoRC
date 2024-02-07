@@ -23,10 +23,10 @@ with c4:
   elif(operator=='-'):
     st.write('Hasil')
     st.write('= ',x-y)
-  elif(operator=='*'):
+  elif(operator=='x'):
     st.write('Hasil')
     st.write('= ',x*y)
-  elif(operator=='/'):
+  elif(operator==':'):
     st.write('Hasil')
     st.write('= ',x/y)
   

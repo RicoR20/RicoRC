@@ -6,7 +6,7 @@ import streamlit as st
 st.header('Rico RC :sparkles;')
 st.subheader('Plot')
 
-c1, c2, c3, c4 = st.colUmns(4)
+c1, c2, c3, c4 = st.columns(4)
 
 with c1:
   x = st.number_input('a',value=0)

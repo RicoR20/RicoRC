@@ -18,12 +18,16 @@ with c3:
   y = st.number_input('b',value=0)
 with c4:
   if(operator=='+'):
+    st.write('Hasil')
     st.write('= ',x+y)
   elif(operator=='-'):
+    st.write('Hasil')
     st.write('= ',x-y)
   elif(operator=='*'):
+    st.write('Hasil')
     st.write('= ',x*y)
   elif(operator=='/'):
+    st.write('Hasil')
     st.write('= ',x/y)
   
 st.caption('Copyright © Rico Rachmad Maulana 2024')

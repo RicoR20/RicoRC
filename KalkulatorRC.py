@@ -3,7 +3,7 @@
 import streamlit as st
 
 #Header
-st.header('Rico RC :sparkles;')
+st.header('Rico RC :sparkles:')
 st.subheader('Plot')
 
 c1, c2, c3, c4 = st.columns(4)

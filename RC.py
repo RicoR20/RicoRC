@@ -32,7 +32,7 @@ def f(x):
   
 u=f(t)
 fig, ax = plt.subplots(figsize=(16,8))
-ax.plot(t, u, label='sin(t)', color='b') #Plotting sin(t) curve
+ax.plot(t, u, label=r'$18x^2 + 9x - 3$', color='b') #Plotting sin(t) curve
 ax.set_ylabel("")
 ax.set_xlabel("t")
 ax.tick_params(axis='y', labelsize=20)

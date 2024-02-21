@@ -30,7 +30,7 @@ def f(x):
   c=3
   return a*x**2 + b*x - c
 
-integral, _ = quad(f(X), -10, 10)
+integral, _ = quad(f(t), -10, 10)
 
 print("Nilai integral fungsi kuadrat: ", integral)
 

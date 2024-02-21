@@ -29,8 +29,13 @@ def f(x):
   b=9
   c=3
   return a*x**2 + b*x - c
-  
+
+x=st.slider('Pilih rentang', -20, 20, (5, 10))
+st.write('nilai x:', x)
+
+t=np.linspace(x[0],x[1],100)
 u=f(t)
+
 fig, ax = plt.subplots(figsize=(16,8))
 ax.plot(t, u, label=r'$18x^2 + 9x - 3$', color='b') #Plotting sin(t) curve
 ax.set_ylabel("")

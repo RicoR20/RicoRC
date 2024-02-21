@@ -23,12 +23,16 @@ ax.tick_params(axis='x', labelsize=15)
 plt.grid(color='green', linestyle='-.', linewidth=.5)
 st.pyplot(fig)
 
-#FUNGSI kUADRAT
+#FUNGSI kUADRAT & INTEGRAL
 def f(x):
   a=18
   b=9
   c=3
   return a*x**2 + b*x - c
+
+integral, _ = quad(f(X), -10, 10)
+
+print("Nilai integral fungsi kuadrat: ", integral)
 
 x=st.slider('Pilih rentang', -20, 20, (5, 10))
 st.write('nilai x:', x)

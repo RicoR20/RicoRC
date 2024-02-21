@@ -11,7 +11,7 @@ st.write('nilai y:', y)
 
 t=np.linspace(x[0]*np.pi,x[1]*np.pi,100)
 u=np.sin(y*t)
-st.write('nilai t:', t)
+#st.write('nilai t:', t)
 
 fig, ax = plt.subplots(figsize=(16,8))
 ax.plot(t, u, label='sin(t)', color='b') #Plotting sin(t) curve

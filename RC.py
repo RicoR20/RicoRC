@@ -44,7 +44,7 @@ integral_value = np.trapz(u, t)
 st.write("Nilai integral fungsi kuadrat dalam rentang yang dipilih:", integral_value)
 
 #FUNGSI TRAPESIUM INTEGRAL
-def trapesium (f, a, b, n=100)
+def trapesium(f, a, b, n=100):
   x=np.linspace(a, b, n+1)
   y=f(x)
   h=(b-a)/n
@@ -53,7 +53,7 @@ def trapesium (f, a, b, n=100)
 
 # Slider untuk memilih rentang untuk integral fungsi polinomial
 integral_range = st.slider('Pilih rentang untuk integral fungsi polinomial', -10.0, 10.0, (1.0, 3.0), key='integral_range')
-integral_result = trapz(f(t), t)
+integral_result = trapesium(f(t), t)
 
 # Tambahkan arsiran untuk area di bawah kurva pada rentang integral
 t_fill = np.linspace(integral_range[0], integral_range[1], 100)
@@ -68,7 +68,7 @@ st.write(f"Hasil integral dari fungsi polinomial pada rentang {integral_range} a
 
 # Slider untuk memilih rentang untuk integral fungsi polinomial
 integral_range = st.slider('Pilih rentang untuk integral fungsi polinomial', -10.0, 10.0, (1.0, 3.0), key='integral_range')
-integral_result = trapz(f(t), t)
+integral_result = trapesium(f(t), t)
 
 # Tambahkan arsiran untuk area di bawah kurva pada rentang integral
 t_fill = np.linspace(integral_range[0], integral_range[1], 100)

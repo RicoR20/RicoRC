@@ -48,7 +48,7 @@ def trapesium(f, a, b, n=100):
   x=np.linspace(a, b, n+1)
   y=f(x)
   h=(b-a)/n
-  s=0.5*(y[0]+y[-1]+np.sum([y[1:-1])
+  s=0.5*(y[0]+y[-1])+np.sum(y[1:-1])
   return h*s
 
 # Slider untuk memilih rentang untuk integral fungsi polinomial

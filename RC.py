@@ -54,6 +54,9 @@ def f(x):
     c = 3
     return a * x ** 2 + b * x - c
 
+x = st.slider('Pilih rentang', -20, 20, (5, 10))
+st.write('nilai x:', x)
+
 t = np.linspace(x[0], x[1], 100)
 u = f(t)
 
@@ -66,7 +69,7 @@ st.write("Nilai integral fungsi kuadrat dalam rentang yang dipilih:", integral_v
 
 # Slider untuk memilih rentang untuk integral fungsi polinomial
 integral_range = st.slider('Pilih rentang untuk integral fungsi polinomial', -10.0, 10.0, (1.0, 3.0), key='integral_range')
-integral_result = trapezoidal_rule(f, integral_range[0], integral_range[1])
+integral_result = trapz(f(t), t)
 
 # Tambahkan arsiran untuk area di bawah kurva pada rentang integral
 t_fill = np.linspace(integral_range[0], integral_range[1], 100)

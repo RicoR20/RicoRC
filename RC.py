@@ -60,6 +60,10 @@ u = f(t)
 fig, ax = plt.subplots(figsize=(16, 8))
 ax.plot(t, u, label=r'$18x^2 + 9x - 3$', color='b')  # Plotting kurva fungsi kuadrat
 
+# Menghitung integral dari fungsi kuadrat dalam rentang yang dipilih
+integral_value = np.trapz(u, t)
+st.write("Nilai integral fungsi kuadrat dalam rentang yang dipilih:", integral_value)
+
 # Slider untuk memilih rentang untuk integral fungsi polinomial
 integral_range = st.slider('Pilih rentang untuk integral fungsi polinomial', -10.0, 10.0, (1.0, 3.0), key='integral_range')
 integral_result = trapezoidal_rule(f, integral_range[0], integral_range[1])

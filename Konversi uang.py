@@ -1,3 +1,4 @@
+import streamlit as st
 import requests
 
 def get_exchange_rate(base_currency, target_currency):
@@ -13,13 +14,17 @@ def convert_currency(amount, from_currency, to_currency):
     return converted_amount
 
 def main():
-    print("Selamat datang di konverter mata uang Asia Tenggara!")
-    print("Mata uang yang tersedia: IDR (Rupiah Indonesia), MYR (Ringgit Malaysia), SGD (Dolar Singapura), THB (Baht Thailand), PHP (Peso Filipina), VND (Dong Vietnam)")
-    from_currency = input("Masukkan kode mata uang asal: ").upper()
-    to_currency = input("Masukkan kode mata uang tujuan: ").upper()
-    amount = float(input("Masukkan jumlah uang yang akan dikonversi: "))
-    converted_amount = convert_currency(amount, from_currency, to_currency)
-    print(f"{amount} {from_currency} setara dengan {converted_amount} {to_currency}")
+    st.title("Konverter Mata Uang Asia Tenggara")
+
+    currency_options = ['IDR', 'MYR', 'SGD', 'THB', 'PHP', 'VND']
+
+    from_currency = st.selectbox("Pilih mata uang asal:", currency_options)
+    to_currency = st.selectbox("Pilih mata uang tujuan:", currency_options)
+    amount = st.number_input("Masukkan jumlah uang yang akan dikonversi:", value=1.0)
+
+    if st.button("Konversi"):
+        converted_amount = convert_currency(amount, from_currency, to_currency)
+        st.success(f"{amount} {from_currency} setara dengan {converted_amount} {to_currency}")
 
 if __name__ == "__main__":
     main()

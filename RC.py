@@ -43,6 +43,14 @@ ax.plot(t, u, label=r'$18x^2 + 9x - 3$', color='b')  # Plotting kurva fungsi kua
 integral_value = np.trapz(u, t)
 st.write("Nilai integral fungsi kuadrat dalam rentang yang dipilih:", integral_value)
 
+#FUNGSI TRAPESIUM INTEGRAL
+def trapesium (f, a, b, n=100)
+  x=np.linspace(a, b, n+1)
+  y=f(x)
+  h=(b-a)/n
+  s=0.5*(y[0]+y[-1])+np.sum([y[1:-1])
+  return h*s
+
 # Slider untuk memilih rentang untuk integral fungsi polinomial
 integral_range = st.slider('Pilih rentang untuk integral fungsi polinomial', -10.0, 10.0, (1.0, 3.0), key='integral_range')
 integral_result = trapz(f(t), t)
